@@ -1,0 +1,45 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+//imported google's material design library
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(//AppBar
+        body: Card(
+            margin: EdgeInsets.only(top: 100),
+            elevation: 10,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+            shadowColor: Colors.black,
+            color: Colors.white,
+            child: SizedBox(
+              height:200,
+                child: ListView(
+                      children: [
+                        ListTile(
+                          leading: Image.asset('assets/l1.jpg',scale: 4.0,),
+                          title: Text(
+                                'Name : abc' '\n'
+                                'Profession : Farmer' '\n'
+                                'Title : myLand' '\n'
+                                'About : Agricultural Land where you can grow any kind of crops according to various seasons.' '\n',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                          fontSize: 10,
+                        ),)
+                        )
+                      ],
+                    )
+                  )
+                ),
+      )
+    );//SizedBox//Card
+    //Center//Scaffold
+  //MaterialApp
+}
+}
